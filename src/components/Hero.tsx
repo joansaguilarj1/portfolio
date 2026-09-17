@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Download, Mail } from "lucide-react";
+import Image from "next/image";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 
 export default function Hero() {
@@ -89,13 +90,15 @@ export default function Hero() {
                     <div className="relative flex min-h-[500px] items-center justify-center">
                         <div className="absolute h-72 w-72 rounded-full bg-blue-600/30 blur-3xl" />
 
-                        <div className="relative flex h-96 w-80 items-center justify-center rounded-3xl border border-white/5 bg-white/[0.02]">
-                            <span className="text-gray-600">
-                                Tu foto aquí
-                            </span>
+                        <div className="relative flex h-96 w-80 items-center justify-center rounded-3xl border  border-white/5 bg-white/[0.02]">
+                            <Image
+                                src="/images/profile.webp"
+                                alt="Joan Sebastian Aguilar"
+                                width={500}
+                                height={600}
+                            />
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
