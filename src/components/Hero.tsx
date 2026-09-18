@@ -11,10 +11,7 @@ import {
 
 } from "react-icons/si";
 
-import {
-    FaGithub,
-    FaLinkedin
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 export default function Hero() {
