@@ -1,7 +1,21 @@
 import Link from "next/link";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import Image from "next/image";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import {
+    SiTypescript,
+    SiReact,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiNestjs,
+    SiPostgresql
+
+} from "react-icons/si";
+
+import {
+    FaGithub,
+    FaLinkedin
+} from "react-icons/fa";
+
 
 export default function Hero() {
     return (
@@ -64,7 +78,7 @@ export default function Hero() {
                                 aria-label="LinkedIn"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <LinkedinIcon className="w-6 h-6" />
+                                <FaLinkedin className="w-6 h-6" />
                             </a>
 
                             <a
@@ -73,7 +87,7 @@ export default function Hero() {
                                 aria-label="GitHub"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <GithubIcon className="w-6 h-6" />
+                                <FaGithub className="w-6 h-6" />
                             </a>
 
                             <a
@@ -81,24 +95,64 @@ export default function Hero() {
                                 aria-label="Email"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <Mail size={20} />
+                                <Mail size={30} strokeWidth={1.5} />
                             </a>
                         </div>
                     </div>
 
                     {/* Visual */}
-                    <div className="relative flex min-h-[500px] items-center justify-center">
-                        <div className="absolute h-72 w-72 rounded-full bg-blue-600/30 blur-3xl" />
+                    <div className="relative flex min-h-125 items-center justify-center">
 
-                        <div className="relative flex h-96 w-80 items-center justify-center rounded-3xl border border-white/5 bg-white/[0.02]">
+                        {/* Glow */}
+                        <div className="absolute h-80 w-80 rounded-full bg-blue-600/40 blur-3xl" />
+
+                        {/* Technology icons */}
+                        <div className="absolute inset-0">
+
+                            {/* TypeScript */}
+                            <div className="absolute left-[8%] top-[18%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiTypescript className="text-3xl text-[#3178C6]" />
+                            </div>
+
+                            {/* React */}
+                            <div className="absolute left-[2%] top-[42%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiReact className="text-3xl text-[#61DAFB]" />
+                            </div>
+
+                            {/* Node */}
+                            <div className="absolute left-[8%] bottom-[18%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiNodedotjs className="text-3xl text-[#5FA04E]" />
+                            </div>
+
+                            {/* Next */}
+                            <div className="absolute right-[8%] top-[18%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiNextdotjs className="text-3xl text-white" />
+                            </div>
+
+                            {/* Nest */}
+                            <div className="absolute right-[2%] top-[42%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiNestjs className="text-3xl text-[#E0234E]" />
+                            </div>
+
+                            {/* PostgreSQL */}
+                            <div className="absolute right-[8%] bottom-[18%] flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 shadow-lg">
+                                <SiPostgresql className="text-3xl text-[#4169E1]" />
+                            </div>
+
+                        </div>
+
+                        {/* Profile */}
+                        <div className="relative z-10 h-129 w-90">
                             <Image
-                                className="rounded-xl object-cover"
                                 src="/images/profile.webp"
                                 alt="Joan Sebastian Aguilar"
-                                width={500}
-                                height={600}
+                                fill
+                                priority
+                                className="object-contain"
+                                sizes="360px"
                             />
                         </div>
+
                     </div>
 
                 </div>
