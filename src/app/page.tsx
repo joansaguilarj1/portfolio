@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Test from "@/components/Test";
+// import Test from "@/components/Test";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Test />
+      {/* <Test /> */}
     </main>
   );
 }
