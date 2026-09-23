@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+    <footer className="border-t border-white/10 bg-surface-primary">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         
         {/* Logo */}
         <Link
