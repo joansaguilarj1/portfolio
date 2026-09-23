@@ -35,12 +35,12 @@ export default function Experience() {
     return (
         <section
             id="experiencia"
-            className="relative overflow-hidden bg-slate-950 py-24">
+            className="relative overflow-hidden bg-surface-secondary pt-20">
 
             <div className="mx-auto max-w-7xl px-6">
 
                 {/* header */}
-                <div className="mb-12 flex items-center justify-between">
+                <div className="mb-3 flex items-center justify-between">
                     <h2 className="text-3xl font-bold text-white">
                         Experiencia Profesional
                     </h2>
@@ -48,7 +48,7 @@ export default function Experience() {
                     <a
                         href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
                         download
-                        className="flex items-center gap-2 rounded-lg border border-white/10 bg-slate-900/50 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
+                        className="flex items-center gap-2 rounded-lg border border-white/10 bg-card-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                     >
                         Ver CV completo
                         <Download size={16} />
@@ -58,7 +58,7 @@ export default function Experience() {
                 {/* Experience cards */}
                 <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
                     {experiences.map((item) => (
-                        <div key={item.company} className="flex gap-4 md:gap-6 p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:bg-slate-900/80 transition-colors">
+                        <div key={item.company} className="flex gap-4 md:gap-6 p-6 rounded-2xl bg-card-primary border border-white/5 hover:bg-slate-900/80 transition-colors">
                             {/* 1. COLUMNA IZQUIERDA: Logo */}
                             <div className="shrink-0 mt-1">
                                 {/* Contenedor del logo con tamaño fijo */}

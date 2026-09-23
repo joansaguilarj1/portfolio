@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Download } from "lucide-react";
 const projecs = [
     {
         title: "Project One",
@@ -31,21 +30,20 @@ export default function Projects() {
     return (
         <section
             id="proyectos"
-            className="relative overflow-hidden bg-slate-950 py-24">
+            className="relative overflow-hidden bg-surface-secondary pt-20">
             <div className="mx-auto max-w-7xl px-6">
                 {/* header */}
-                <div className="mb-12 flex items-center justify-between">
+                <div className="mb-3 flex items-center justify-between">
                     <h2 className="text-3xl font-bold text-white">
-                        Experiencia Profesional
+                        Proyectos
                     </h2>
 
                     <a
                         href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
                         download
-                        className="flex items-center gap-2 rounded-lg border border-white/10 bg-slate-900/50 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
+                        className="flex items-center gap-2 rounded-lg border border-white/10 bg-card-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                     >
-                        Ver CV completo
-                        <Download size={16} />
+                        Ver todos los proyectos
                     </a>
                 </div>
                 {/* Project cards */}
@@ -53,7 +51,7 @@ export default function Projects() {
                     {projecs.map((item) => (
                         <div
                             key={item.title}
-                            className="rounded-lg bg-slate-900/50 p-6 transition-colors hover:bg-slate-900/70" >
+                            className="rounded-lg bg-card-primary p-6 transition-colors hover:bg-slate-900/70" >
                             <Image
                                 src={item.image}
                                 alt={item.title}

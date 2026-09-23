@@ -18,9 +18,9 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative min-h-screen overflow-hidden bg-slate-950 pt-16"
+            className="relative overflow-hidden bg-surface-secondary pt-16"
         >
-            <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-6 py-20">
+            <div className="mx-auto flex min-h-[calc(10vh-4rem)] max-w-7xl items-center px-6 pt-5">
                 <div className="grid w-full gap-12 lg:grid-cols-2 lg:items-center">
 
                     {/* Content */}
@@ -75,7 +75,9 @@ export default function Hero() {
                                 aria-label="LinkedIn"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <FaLinkedin className="w-6 h-6" />
+                                <FaLinkedin
+                                    size={20}
+                                  />
                             </a>
 
                             <a
@@ -84,7 +86,9 @@ export default function Hero() {
                                 aria-label="GitHub"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <FaGithub className="w-6 h-6" />
+                                <FaGithub
+                                    size={20}
+                                    />
                             </a>
 
                             <a
@@ -92,7 +96,7 @@ export default function Hero() {
                                 aria-label="Email"
                                 className="text-gray-400 transition-colors hover:text-white"
                             >
-                                <Mail size={30} strokeWidth={1.5} />
+                                <Mail size={24} strokeWidth={1.5} />
                             </a>
                         </div>
                     </div>

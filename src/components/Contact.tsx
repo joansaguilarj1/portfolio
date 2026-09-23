@@ -5,11 +5,11 @@ export default function Contact() {
     return (
         <section
             id="contacto"
-            className="relative overflow-hidden bg-slate-950 py-24">
+            className="relative overflow-hidden bg-surface-secondary pt-20 pb-10">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Contact card */}
-                <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 rounded-2xl bg-slate-900/50 border border-white/5">
-                    <div className="m-10">
+                <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 rounded-2xl bg-card-primary border border-white/5">
+                    <div className="m-8">
                         <h2 className="text-3xl">
                             ¿Tienes un proyecto en mente?
                         </h2>
@@ -34,19 +34,15 @@ export default function Contact() {
                             <Phone size={16} />
                             +57 311882550
                         </a>
-                        <a
-                            href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
-                            download
-                            className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
-                        >
+                        <span className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors" >
                             <MapPin size={16} />
                             Bogota, Colombia
-                        </a>
+                        </span>
 
                     </div>
-                    <div className="m-10">
+                    <div className="m-8">
                         <Form action="/search">
-                            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 mb-5">
+                            <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 mb-5">
                                 <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm" name="query" placeholder="Nombre" />
                                 <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm" name="query" placeholder="Correo" />
                             </div>
