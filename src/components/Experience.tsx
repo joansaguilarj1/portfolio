@@ -48,17 +48,18 @@ export default function Experience() {
                     <a
                         href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
                         download
-                        className="flex items-center gap-2 rounded-lg border border-white/10 bg-card-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
-                    >
-                        Ver CV completo
-                        <Download size={16} />
+                        className="inline-flex rounded-lg bg-gradient-to-r from-blue-400 to-[#919af4] p-[1px] transition-transform hover:scale-[1.02]">
+                        <span className="flex w-full items-center justify-center gap-2 rounded-[7px] bg-card-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-card-primary/90">
+                            Ver CV completo
+                            <Download size={16} />
+                        </span>
                     </a>
                 </div>
 
                 {/* Experience cards */}
                 <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
                     {experiences.map((item) => (
-                        <div key={item.company} className="flex gap-4 md:gap-6 p-6 rounded-2xl bg-card-primary border border-white/5 hover:bg-slate-900/80 transition-colors">
+                        <div key={item.company} className="flex gap-4 md:gap-6 p-6 rounded-2xl bg-card-primary border border-white/5">
                             {/* 1. COLUMNA IZQUIERDA: Logo */}
                             <div className="shrink-0 mt-1">
                                 {/* Contenedor del logo con tamaño fijo */}

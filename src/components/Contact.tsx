@@ -19,16 +19,16 @@ export default function Contact() {
                         <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-4 mt-4">
                             Estoy abierto a nuevas oporturnidades y proyectos desafiantes, si crees que puedo aportar valor a tu equipo no dudes en contactarme.</p>
                         <a
-                            href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
-                            download
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=joansaguilarj@gmail.com"
+                            target="_blank"
                             className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                         >
                             <Mail size={16} />
                             Joansaguilarj@gmail.com
                         </a>
                         <a
-                            href="/cv/Joan-Sebastian-Aguilar-CV.pdf"
-                            download
+                            href="http://wa.me/573118825570"
+                            target="_blank"
                             className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                         >
                             <Phone size={16} />
@@ -42,14 +42,14 @@ export default function Contact() {
                     </div>
                     <div className="m-8">
                         <Form action="/search">
-                            <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 mb-5">
+                            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 mb-5">
                                 <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm" name="query" placeholder="Nombre" />
                                 <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm" name="query" placeholder="Correo" />
                             </div>
                             <div className="flex flex-col">
-                                <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm mb-4" name="query" placeholder="Asunto" />
-                                <textarea className="text-top bg-slate-800 h-26 p-3 border border-white/20 rounded-sm mb-4" name="query" placeholder="Mensaje" />
-                                <button className="bg-blue-600 inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-white/5" type="submit">Enviar Mensaje <Send size={16} /></button>
+                                <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm mb-5" name="query" placeholder="Asunto" />
+                                <textarea className="text-top bg-slate-800 h-26 p-3 border border-white/20 rounded-sm mb-5" name="query" placeholder="Mensaje" />
+                                <button className="bg-blue-600 inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-blue-800 hover:bg-blue-800" type="submit">Enviar Mensaje <Send size={16} /></button>
                             </div>
                         </Form>
                     </div>
