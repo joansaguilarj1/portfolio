@@ -8,7 +8,7 @@ export default function Contact() {
             className="relative overflow-hidden bg-surface-secondary pt-20 pb-10">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Contact card */}
-                <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 rounded-2xl bg-card-primary border border-white/5">
+                <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded-2xl bg-card-primary border border-white/5">
                     <div className="m-8">
                         <h2 className="text-3xl">
                             ¿Tienes un proyecto en mente?
@@ -49,7 +49,7 @@ export default function Contact() {
                             <div className="flex flex-col">
                                 <input className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm mb-5" name="query" placeholder="Asunto" />
                                 <textarea className="text-top bg-slate-800 h-26 p-3 border border-white/20 rounded-sm mb-5" name="query" placeholder="Mensaje" />
-                                <button className="bg-blue-600 inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-blue-800 hover:bg-blue-800" type="submit">Enviar Mensaje <Send size={16} /></button>
+                                <button className="bg-blue-600 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-500" type="submit">Enviar Mensaje <Send size={16} /></button>
                             </div>
                         </Form>
                     </div>
