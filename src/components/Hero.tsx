@@ -31,7 +31,7 @@ export default function Hero() {
 
                         <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
                             Joan Sebastian
-                            <span className="block text-blue-400">
+                            <span className="block inline-block bg-gradient-to-r from-blue-400 to-[#919af4] bg-clip-text text-transparent font-bold text-500">
                                 Aguilar Jimenez
                             </span>
                         </h1>
