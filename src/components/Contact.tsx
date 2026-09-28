@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { SiResend } from "react-icons/si";
 
 export default function Contact() {
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -10,7 +11,6 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus('loading');
-        setErrorMessage('');
 
         const form = e.currentTarget;
         const formData = new FormData(form);
@@ -40,11 +40,8 @@ export default function Contact() {
             form.reset();
         } catch (err: unknown) {
             setStatus('error');
-            if (err instanceof Error) {
-                setErrorMessage(err.message);
-            } else {
-                setErrorMessage('Error al enviar el mensaje');
-            }
+            setErrorMessage('Error al enviar el mensaje.');
+
         }
     };
 
@@ -87,7 +84,7 @@ export default function Contact() {
                         </span>
                     </div>
 
-                    <div className="m-8">
+                    <div className="mx-8 mt-8">
                         <form onSubmit={handleSubmit}>
                             <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 mb-5">
                                 <input
@@ -135,6 +132,7 @@ export default function Contact() {
                                     )}
                                 </button>
 
+
                                 {status === 'success' && (
                                     <div className="flex items-center gap-2 mt-4 text-green-400 text-sm">
                                         <CheckCircle2 size={16} />
@@ -148,11 +146,18 @@ export default function Contact() {
                                         <span>{errorMessage || 'Ocurrió un error al enviar el mensaje. Intenta de nuevo.'}</span>
                                     </div>
                                 )}
+
+                                <div className="flex mt-4 mb-2 justify-end">
+                                    <p className="text-xs mr-2 text-gray-400">Powered by</p>
+                                    <SiResend className="pt-0" size={12} />
+                                    <p className="text-xs font-semibold " >esend</p>
+                                </div>
+
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }
