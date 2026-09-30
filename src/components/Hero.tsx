@@ -10,11 +10,12 @@ import {
     SiPostgresql
 
 } from "react-icons/si";
-
+import { portfolioContent } from "@/content/site";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 export default function Hero() {
+    const heroContent = portfolioContent.hero;
     return (
         <section
             id="inicio"
@@ -26,25 +27,23 @@ export default function Hero() {
                     {/* Content */}
                     <div>
                         <p className="mb-4 text-lg font-medium text-blue-400">
-                            ¡Hola! Soy
+                            {heroContent.greeting}
                         </p>
 
                         <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
-                            Joan Sebastian
+                            {heroContent.firstName}
+                            <br></br>
                             <span className="block inline-block bg-gradient-to-r from-blue-400 to-[#919af4] bg-clip-text text-transparent font-bold text-500">
-                                Aguilar Jimenez
+                                {heroContent.lastName}
                             </span>
                         </h1>
 
                         <p className="mt-6 text-2xl font-semibold text-white">
-                            Full Stack Developer
+                            {heroContent.role}
                         </p>
 
                         <p className="mt-5 max-w-xl text-base leading-7 text-gray-400">
-                            Desarrollo aplicaciones web escalables y robustas con
-                            tecnologías modernas. Apasionado por escribir código limpio,
-                            resolver problemas complejos y crear experiencias digitales
-                            excepcionales.
+                            {heroContent.description}
                         </p>
 
                         {/* Buttons */}
@@ -53,7 +52,7 @@ export default function Hero() {
                                 href="#proyectos"
                                 className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-500"
                             >
-                                Ver mis proyectos
+                                {heroContent.projectsButton}
                                 <ArrowRight size={18} />
                             </Link>
 
@@ -62,7 +61,7 @@ export default function Hero() {
                                 download
                                 className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-white/5"
                             >
-                                Descargar CV
+                                {heroContent.cvButton}
                                 <Download size={18} />
                             </a>
                         </div>
@@ -77,7 +76,7 @@ export default function Hero() {
                             >
                                 <FaLinkedin
                                     size={20}
-                                  />
+                                />
                             </a>
 
                             <a
@@ -88,7 +87,7 @@ export default function Hero() {
                             >
                                 <FaGithub
                                     size={20}
-                                    />
+                                />
                             </a>
 
                             <a
@@ -153,9 +152,7 @@ export default function Hero() {
                                 sizes="360px"
                             />
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>

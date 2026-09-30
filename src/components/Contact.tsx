@@ -3,8 +3,11 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { SiResend } from "react-icons/si";
+import { portfolioContent } from "@/content/site";
 
 export default function Contact() {
+
+    const context = portfolioContent.contact;
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -54,13 +57,13 @@ export default function Contact() {
                 <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded-2xl bg-card-primary border border-white/5">
                     <div className="m-8">
                         <h2 className="text-3xl">
-                            ¿Tienes un proyecto en mente?
+                            {context.title}
                         </h2>
                         <h3 className="text-2xl text-blue-600/90 dark:text-sky-400 mt-1">
-                            ¡Hablemos!
+                            {context.subTitle}
                         </h3>
                         <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-4 mt-4">
-                            Estoy abierto a nuevas oportunidades y proyectos desafiantes, si crees que puedo aportar valor a tu equipo no dudes en contactarme.
+                            {context.description}
                         </p>
                         <a
                             href="https://mail.google.com/mail/?view=cm&fs=1&to=joansaguilarj@gmail.com"
@@ -68,7 +71,7 @@ export default function Contact() {
                             className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                         >
                             <Mail size={16} />
-                            Joansaguilarj@gmail.com
+                            {context.mail}
                         </a>
                         <a
                             href="http://wa.me/573118825570"
@@ -76,11 +79,11 @@ export default function Contact() {
                             className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors hover:border-white/20 hover:bg-slate-900/70"
                         >
                             <Phone size={16} />
-                            +57 311882550
+                            {context.phone}
                         </a>
                         <span className="flex items-center gap-2 py-2 text-sm font-mono text-white transition-colors" >
                             <MapPin size={16} />
-                            Bogota, Colombia
+                            {context.city}
                         </span>
                     </div>
 
@@ -90,27 +93,27 @@ export default function Contact() {
                                 <input
                                     required
                                     name="name"
-                                    placeholder="Nombre"
+                                    placeholder={context.form.namePlaceholder}
                                     className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm text-white text-sm focus:outline-none focus:border-blue-500"
                                 />
                                 <input
                                     required
                                     type="email"
                                     name="email"
-                                    placeholder="Correo"
+                                    placeholder={context.form.emailPlaceholder}
                                     className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm text-white text-sm focus:outline-none focus:border-blue-500"
                                 />
                             </div>
                             <div className="flex flex-col">
                                 <input
                                     name="subject"
-                                    placeholder="Asunto"
+                                    placeholder={context.form.subjectPlaceholder}
                                     className="bg-slate-800 h-9 p-3 border border-white/20 rounded-sm mb-5 text-white text-sm focus:outline-none focus:border-blue-500"
                                 />
                                 <textarea
                                     required
                                     name="message"
-                                    placeholder="Mensaje"
+                                    placeholder={context.form.messagePlaceholder}
                                     rows={4}
                                     className="text-top bg-slate-800 p-3 border border-white/20 rounded-sm mb-5 text-white text-sm focus:outline-none focus:border-blue-500 resize-none"
                                 />
@@ -121,12 +124,12 @@ export default function Contact() {
                                 >
                                     {status === 'loading' ? (
                                         <>
-                                            Enviando...
+                                            {context.form.sendButton}
                                             <Loader2 size={16} className="animate-spin" />
                                         </>
                                     ) : (
                                         <>
-                                            Enviar Mensaje
+                                            {context.form.labelButton}
                                             <Send size={16} />
                                         </>
                                     )}
@@ -136,14 +139,14 @@ export default function Contact() {
                                 {status === 'success' && (
                                     <div className="flex items-center gap-2 mt-4 text-green-400 text-sm">
                                         <CheckCircle2 size={16} />
-                                        <span>¡Mensaje enviado con éxito! Te responderé pronto.</span>
+                                        <span>{context.reponseMsg.success}</span>
                                     </div>
                                 )}
 
                                 {status === 'error' && (
                                     <div className="flex items-center gap-2 mt-4 text-red-400 text-sm">
                                         <AlertCircle size={16} />
-                                        <span>{errorMessage || 'Ocurrió un error al enviar el mensaje. Intenta de nuevo.'}</span>
+                                        <span>{errorMessage || context.reponseMsg.error}</span>
                                     </div>
                                 )}
 

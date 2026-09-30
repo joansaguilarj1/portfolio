@@ -1,39 +1,6 @@
-import { Landmark, Users, CodeXml, Rocket } from "lucide-react";
+import { portfolioContent } from "@/content/site";
 
-const aboutItems = [
-  {
-    name: "Experiencia",
-    title: "4+ Años de experiencia",
-    description:
-      "Desarrollando soluciones web para el sector financiero.",
-    icon: Users,
-    color: "#1e65eb",
-  },
-  {
-    name: "Area",
-    title: "Banca & Seguros",
-    description:
-      "Experiencia en proyectos para Davivienda y Seguros Cardif BNP Paribas.",
-    icon: Landmark,
-    color: "#A27BDC",
-  },
-  {
-    name: "Stack",
-    title: "Full Stack",
-    description:
-      "Frontend moderno y backend sólido con las mejores prácticas.",
-    icon: CodeXml,
-    color: "#5FB558",
-  },
-  {
-    name: "Tecnologia",
-    title: "Pasión por la tecnología",
-    description:
-      "En constante aprendizaje y siempre buscando nuevos desafíos.",
-    icon: Rocket,
-    color: "#F28E16",
-  },
-];
+const aboutItems = portfolioContent.about.highlights;
 
 export default function About() {
   return (
