@@ -1,35 +1,8 @@
 import { Download } from "lucide-react";
 import Image from "next/image";
-const experiences = [
-    {
-        logo: "/images/sofka-logo.webp",
-        company: "Sofka Technologies",
-        role: "Full Stack Developer",
-        period: "Abr 2024 — Abr 2025",
-        description:
-            "Desarrollo de aplicaciones web para proyectos del sector financiero y asegurador.",
-        technologies: [
-            "TypeScript",
-            "Next.js",
-            "NestJS",
-            "PostgreSQL",
-        ],
-    },
-    {
-        logo: "/images/tcs-logo.webp",
-        company: "TCS",
-        role: "Frontend Developer",
-        period: "Nov 2021 — Abr 2024",
-        description:
-            "Desarrollo de funcionalidades para aplicaciones bancarias, integración con servicios backend y construcción de flujos de negocio.",
-        technologies: [
-            "Angular",
-            "TypeScript",
-            "Jenkins",
-            "GCP",
-        ],
-    },
-];
+import { portfolioContent } from "@/content/site";
+
+const experiences = portfolioContent.experience.experiences;
 
 export default function Experience() {
     return (
@@ -42,7 +15,7 @@ export default function Experience() {
                 {/* header */}
                 <div className="mb-3 flex items-center justify-between">
                     <h2 className="text-3xl font-bold text-white">
-                        Experiencia Profesional
+                        {portfolioContent.about.title}
                     </h2>
 
                     <a
@@ -50,7 +23,7 @@ export default function Experience() {
                         download
                         className="inline-flex rounded-lg bg-gradient-to-r from-blue-400 to-[#919af4] p-[1px] transition-transform hover:scale-[1.02]">
                         <span className="flex w-full items-center justify-center gap-2 rounded-[7px] bg-card-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-card-primary/90">
-                            Ver CV completo
+                            {portfolioContent.experience.cvButton}
                             <Download size={16} />
                         </span>
                     </a>
@@ -99,17 +72,10 @@ export default function Experience() {
                                         </span>
                                     ))}
                                 </div>
-
                             </div>
                         </div>))}
-
-
                 </div>
             </div>
-
-
-
         </section >
-
     )
 }
